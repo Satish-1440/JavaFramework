@@ -16,7 +16,7 @@ class CRUDOperations
     static int columnCount;
     static String header = "";
     static String values = "";
-    static char activeStatus = 'a';
+    static String activeStatus = "a";
     CRUDOperations()
     {
         System.out.print("Enter database name: ");
@@ -262,11 +262,12 @@ class CRUDOperations
     }
     public static void deleteRecord()
     {
+        String inactiveStatus = "i";
         try
         {
             System.out.print("Enter" + columnNames[0] + ": ");
             uniqueValue = scanner.nextLine();
-            query = "update "+ tableName +" set " + columnNames[columnNames.length - 1] + " = 'i' where " + columnNames[0] + " = '" + uniqueValue + "' and " + columnNames[columnNames.length - 1]+ " = '" + activeStatus + "'";
+            query = "update "+ tableName +" set " + columnNames[columnNames.length - 1] + " = '" + inactiveStatus + "' where " + columnNames[0] + " = '" + uniqueValue + "' and " + columnNames[columnNames.length - 1]+ " = '" + activeStatus + "'";
             stmt.executeUpdate(query);
             System.out.println( "\n" + tableName + " details deleted."); 
         }
