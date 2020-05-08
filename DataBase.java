@@ -1,9 +1,6 @@
 // Java program to do CRUD operations on database table using MySQL database.
 import java.sql.*;
 import java.util.Scanner;
-
-
-
 class CRUDOperations
 {
     static String[] columnNames;
@@ -280,9 +277,6 @@ class CRUDOperations
         }
     }
 }
-
-
-
 class DataBase
 {
     public static void main(String[] args)
